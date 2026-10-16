@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "complexity-analyzer.helloWorld",
-        "title": "Hello World"
+        "command": "complexity-analyzer.analyzeFile",
+        "title": "Analize Complexity"
       }
     ]
   },
