@@ -1,0 +1,11 @@
+{
+  "entryPoints": [
+    "src/extension.ts",
+    "src/functionFounder.ts",
+    "src/analyze/tokenizer.ts",
+    "src/analyze/complexity.ts",
+    "src/analyze/types.ts"
+  ],
+  "out": "docs",
+  "tsconfig": "tsconfig.json"
+}
