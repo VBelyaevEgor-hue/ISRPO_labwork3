@@ -28,7 +28,7 @@ int TestFunc2 (int num1, int num2) {
 
 
 void TestFunc3 (int num1, int num2) {
-    if ((num1 > num2) || (num1 == num2) || (num1 < num2)) {
+    if ((num1 > num2) || (num1 == num2) || (num1 < num2) || (num1 > 10) || (num2 > 10)) {
         return;
     }
 }
