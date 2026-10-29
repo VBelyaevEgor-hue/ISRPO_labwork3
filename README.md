@@ -43,6 +43,22 @@ TestFunc3(int, int) (строка 30): сложность 6, вложеннос�
 - `src/analyze/types.ts`: общие типы;
 - `docs/`: документация, сгенерированная TypeDoc (`npm run docs`).
 
+## Архитектура
+
+```mermaid
+flowchart TD
+    U[Пользователь: Ctrl+Shift+P, Analyze Complexity] --> P[package.json: команда complexity-analyzer.analyzeFile]
+    P --> E[extension.ts: activate, обработчик команды]
+    E --> F[functionFounder.ts: findFunctions]
+    F --> V[VS Code API: executeDocumentSymbolProvider]
+    V --> C[Расширение C/C++: список функций файла]
+    F --> T[analyze/tokenizer.ts: разбор текста функции]
+    T --> A[analyze/complexity.ts: сложность и вложенность]
+    A --> F
+    F --> E
+    E --> O[Output Channel: вывод результата]
+```
+
 ## История коммитов
 
 - 2026-10-13: Initial commit
